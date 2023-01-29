@@ -3,6 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@capacitor/android": "4.6.2",
+    "@capacitor/app": "4.1.1",
+    "@capacitor/core": "4.6.2",
+    "@capacitor/haptics": "4.1.0",
+    "@capacitor/keyboard": "4.1.1",
+    "@capacitor/status-bar": "4.1.1",
     "@react-three/fiber": "^8.10.1",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
@@ -37,5 +43,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@capacitor/cli": "4.6.2"
   }
 }

@@ -1,0 +1,7 @@
+{
+  "name": "fiber",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
