@@ -1,0 +1,7 @@
+{
+  "name": "ionicnative",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
