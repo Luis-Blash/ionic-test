@@ -1,25 +1,26 @@
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
-import ExploreContainer from '../components/ExploreContainer';
-import './Tab1.css';
+import {
+  IonPage,
+} from "@ionic/react";
+import { useEffect, useRef, useState } from "react";
+import { App } from "../three";
+import "./Tab1.css";
 
 const Tab1: React.FC = () => {
-  return (
-    <IonPage>
-      <IonHeader>
-        <IonToolbar>
-          <IonTitle>Tab 1</IonTitle>
-        </IonToolbar>
-      </IonHeader>
-      <IonContent fullscreen>
-        <IonHeader collapse="condense">
-          <IonToolbar>
-            <IonTitle size="large">Tab 1</IonTitle>
-          </IonToolbar>
-        </IonHeader>
-        <ExploreContainer name="Tab 1 page" />
-      </IonContent>
-    </IonPage>
-  );
+  const canvas = useRef<HTMLCanvasElement>(null);
+  const [number, setNumber] = useState<number>(0);
+  useEffect(() => {
+    setNumber(1);
+  }, []);
+
+  useEffect(() => {
+    if (number > 0) {
+      const app = new App(canvas.current);
+      console.log(app);
+      
+    }
+  }, [number]);
+
+  return <IonPage ref={canvas}></IonPage>;
 };
 
 export default Tab1;
